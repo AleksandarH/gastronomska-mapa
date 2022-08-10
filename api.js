@@ -9,11 +9,7 @@ async function fetchData() {
       for (const el of data) {
         if (e.target.id == el.id) {
           //// turns on visibility
-          information.classList.remove("invisible");
-          sastojci.classList.remove("invisible");
-          displayImage.classList.remove("invisible");
-          arrow.classList.remove("invisible");
-          arrow.classList.add("animation");
+          addClasses();
           //// Adds text
           zupanija.innerHTML = el.županija;
           jelo.innerHTML = el.jelo;
@@ -24,6 +20,7 @@ async function fetchData() {
       }
     });
   }
+  return data;
 }
 
 fetchData();

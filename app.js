@@ -26,11 +26,10 @@ const zupanija = document.getElementById("zupanija");
 const jelo = document.getElementById("jelo");
 const recept = document.getElementById("recept");
 const image = document.getElementById("image");
-
 const information = document.getElementById("information");
 const sastojci = document.getElementById("sastojci");
 const displayImage = document.getElementById("displayImageAndVideo");
-const arrow = document.getElementById("arrow")
+const arrow = document.getElementById("arrow");
 
 //// Prikaz imena zupanije hoverom miša
 for (const county of counties) {
@@ -39,4 +38,14 @@ for (const county of counties) {
     .addEventListener("mouseenter", function () {
       document.getElementById("imeZupanije").innerHTML = county.title;
     });
+}
+
+//// Function for adding css classes (Adding elements to the page)
+
+function addClasses() {
+  //// turns on visibility
+  information.classList.remove("invisible");
+  sastojci.classList.remove("invisible");
+  displayImage.classList.remove("invisible");
+  arrow.classList.remove("invisible");
 }
