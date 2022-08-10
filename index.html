@@ -11,10 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
-    
-    <h1>Hrvatska gastronomska mapa</h1>
-    <h2>Kliknite na pojedinu županiju za recept</h2>
-    <h4 id="imeZupanije"></h4>
+    <nav></nav>
+    <div id="arrow" class="invisible">
+      
+      🡳</div>
+    <header>
+      <h1>Hrvatska gastronomska mapa</h1>
+      <h2>Kliknite na pojedinu županiju za recept</h2>
+      <h4 id="imeZupanije"></h4>
+    </header>
     <div class="mapDiv">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -164,17 +169,20 @@
         </g>
       </svg>
     </div>
-    <div id="information" class="invisible">
-      <h2 id="zupanija"></h2>
-      <h3 id="jelo"></h2>
-      <p id="recept"></p>
+    <div class="textArea">
+      <div id="information" class="invisible">
+        <h2 id="zupanija"></h2>
+        <h3 id="jelo"></h2>
+        <p id="recept"></p>
+      </div>
+      <div id="sastojci" class="invisible">
+        <h3>Sastojci:</h3>
+        <p id="sastojciText"></p>
+      </div>
     </div>
-    <div id="sastojci" class="invisible">
-      <h3>Sastojci:</h3>
-      <p id="sastojciText"></p>
-    </div>
+
     <div id="displayImageAndVideo" class="invisible">
-      <div id="image"></div>
+      <img src="" id="image">
     </div>
     <script src="api.js"></script>
     <script src="app.js"></script>

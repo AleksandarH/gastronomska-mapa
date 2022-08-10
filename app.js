@@ -30,6 +30,7 @@ const image = document.getElementById("image");
 const information = document.getElementById("information");
 const sastojci = document.getElementById("sastojci");
 const displayImage = document.getElementById("displayImageAndVideo");
+const arrow = document.getElementById("arrow")
 
 //// Prikaz imena zupanije hoverom miša
 for (const county of counties) {
