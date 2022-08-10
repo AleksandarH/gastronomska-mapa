@@ -1,22 +1,26 @@
+let data;
+
 async function fetchData() {
   const url = "https://croatian-food-api.herokuapp.com/jela";
   let response = await fetch(url);
-  let data = await response.json();
+  data = await response.json();
 
   ///// DISPLAY INFORMATION
-  for (const county of counties) {
+  for (const county of data) {
+    //// Displays coutny name on mouse hover
+    showCountyName(county);
+    //// Calls functions if the ID of the clicked county matches with the ID of the county in the API data
     document.getElementById(county.id).addEventListener("click", function (e) {
-      for (const el of data) {
-        if (e.target.id == el.id) {
-          //// turns on visibility
-          addClasses();
-          //// Adds text
-          zupanija.innerHTML = el.županija;
-          jelo.innerHTML = el.jelo;
-          recept.innerHTML = el.recept;
-          sastojciText.innerHTML = el.sastojci.join(", "); //// This can be improved later on
-          image.src = el.slikaJela;
-        }
+      if (e.target.id === county.id) {
+        //// turns on visibility
+        addClasses();
+        //// Adds text and image
+        addText(county);
+        //// Shows county name over hover
+        showCountyName(county);
+
+        //// Makes green stuff!
+        green(county);
       }
     });
   }

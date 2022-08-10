@@ -1,5 +1,6 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 body {
@@ -10,10 +11,20 @@ body {
   flex-direction: column;
 }
 
-a:link {
+#arrow:link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(21, 98, 98);
   text-decoration: none;
-  padding: 40px;
+  padding: 15px;
   font-size: 25px;
+  border-radius: 7px;
+}
+
+#arrow:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .mapDiv {
@@ -53,6 +64,11 @@ svg path:hover {
   cursor: pointer;
 }
 
+svg path:active {
+  fill: rgb(11, 73, 11);
+  cursor: pointer;
+}
+
 .land {
   fill: #00394f;
   fill-opacity: 1;
@@ -69,6 +85,7 @@ svg path:hover {
   border-bottom-left-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 20px;
 }
 
 #sastojci {
@@ -79,6 +96,7 @@ svg path:hover {
   border-bottom-right-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 20px;
 }
 
 #image {
@@ -90,7 +108,7 @@ svg path:hover {
   text-align: center;
   max-width: 50%;
   max-height: 90%;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 20px;
   margin-bottom: 50px;
   margin: 0 auto;
@@ -104,7 +122,6 @@ svg path:hover {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  align-items: center;
   justify-content: center;
   margin-top: 50px;
   min-height: fit-content;
@@ -114,27 +131,31 @@ svg path:hover {
   color: black;
 }
 
-#arrow {
-  position: fixed;
-  background-color: aquamarine;
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #022632;
+  color: rgb(128, 121, 121);
   text-align: center;
-
-  font-size: 25px;
-  border-radius: 15px;
-  margin-right: 35px;
-  margin-bottom: 20px;
-  bottom: 0;
-  right: 0;
+  padding-top: 25px;
 }
 
-#arrow:hover {
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a:hover {
+  color: antiquewhite;
+  text-decoration: underline;
   cursor: pointer;
-  opacity: 0.7;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 944px) {
   .textArea {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #information {
     border-radius: 20px;

@@ -1,27 +1,3 @@
-const counties = [
-  { id: "HR-01", title: "Zagrebačka županija" },
-  { id: "HR-02", title: "Krapinsko-zagorska županija" },
-  { id: "HR-03", title: "Sisačko-moslavačka županija" },
-  { id: "HR-04", title: "Karlovačka županija" },
-  { id: "HR-05", title: "Varaždinska županija" },
-  { id: "HR-06", title: "Koprivničko-križevačka županija" },
-  { id: "HR-07", title: "Bjelovarsko-bilogorska županija" },
-  { id: "HR-08", title: "Primorsko-goranska županija" },
-  { id: "HR-09", title: "Ličko-senjska županija" },
-  { id: "HR-10", title: "Virovitičko-podravska županija" },
-  { id: "HR-11", title: "Požeško-slavonska županija" },
-  { id: "HR-12", title: "Brodsko-posavska županija" },
-  { id: "HR-13", title: "Zadarska županija" },
-  { id: "HR-14", title: "Osječko-baranjska županija" },
-  { id: "HR-15", title: "Šibensko-kninska županija" },
-  { id: "HR-16", title: "Vukovarsko-srijemska županija" },
-  { id: "HR-17", title: "Splitsko-dalmatinska županija" },
-  { id: "HR-18", title: "Istarska županija" },
-  { id: "HR-19", title: "Dubrovačko-neretvanska županija" },
-  { id: "HR-20", title: "Međimurska županija" },
-  { id: "HR-21", title: "Grad Zagreb" },
-];
-
 const zupanija = document.getElementById("zupanija");
 const jelo = document.getElementById("jelo");
 const recept = document.getElementById("recept");
@@ -30,22 +6,45 @@ const information = document.getElementById("information");
 const sastojci = document.getElementById("sastojci");
 const displayImage = document.getElementById("displayImageAndVideo");
 const arrow = document.getElementById("arrow");
+const land = document.getElementsByClassName("land");
 
 //// Prikaz imena zupanije hoverom miša
-for (const county of counties) {
+
+function showCountyName(county) {
   document
     .getElementById(county.id)
     .addEventListener("mouseenter", function () {
-      document.getElementById("imeZupanije").innerHTML = county.title;
+      document.getElementById("imeZupanije").innerHTML = county.županija;
     });
 }
 
 //// Function for adding css classes (Adding elements to the page)
 
 function addClasses() {
-  //// turns on visibility
   information.classList.remove("invisible");
   sastojci.classList.remove("invisible");
   displayImage.classList.remove("invisible");
   arrow.classList.remove("invisible");
+}
+
+//// Function for adding text and image
+
+function addText(el) {
+  zupanija.innerHTML = el.županija;
+  jelo.innerHTML = el.jelo;
+  recept.innerHTML = el.recept;
+  sastojciText.innerHTML = el.sastojci.join(", "); //// This can be improved later on
+  image.src = el.slikaJela;
+}
+
+//// Greeeeeen
+
+function green(county) {
+  for (const county of land) {
+    document.getElementById(county.id).addEventListener("click", function (e) {
+      if (e.target.id === county.id) {
+        county.style.setProperty("fill", "rgb(11, 73, 11)");
+      }
+    });
+  }
 }
