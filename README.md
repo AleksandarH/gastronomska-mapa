@@ -1,6 +1,6 @@
 # Gastronomska-mapa
 
-Translates to Gastronomy map, or just Culinary map
+Translates to Gastronomy map, or just Culinary map.
 A map of Croatia, her counties and the most popular dish of each specific county county. 😋🍴
 
 🍔🍕🍖🍗🍚🍜🍝🍰🍪🍩🍤🍣🍠🍟🍞🍅🍆🍇🍈🍉🍊🍌🥒🥑🥐🍲🍓🍒🍑🍍🥓🥔🥕🥖🥗🥘🥙🥚
