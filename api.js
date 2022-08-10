@@ -13,6 +13,7 @@ async function fetchData() {
           sastojci.classList.remove("invisible");
           displayImage.classList.remove("invisible");
           arrow.classList.remove("invisible");
+          arrow.classList.add("animation");
           //// Adds text
           zupanija.innerHTML = el.županija;
           jelo.innerHTML = el.jelo;
