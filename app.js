@@ -48,3 +48,5 @@ function green(county) {
     });
   }
 }
+
+//// Day/Night mode
