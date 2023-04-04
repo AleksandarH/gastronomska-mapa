@@ -7,6 +7,12 @@ const sastojci = document.getElementById("sastojci");
 const displayImage = document.getElementById("displayImageAndVideo");
 const arrow = document.getElementById("arrow");
 const land = document.getElementsByClassName("land");
+const dayNight = document.getElementById("dayNight");
+const body = document.body;
+const nav = document.getElementsByTagName("nav");
+const nMode = document.getElementById("nightMode");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const options = document.getElementsByTagName("option");
 
 //// Prikaz imena zupanije hoverom miša
 
@@ -36,17 +42,3 @@ function addText(el) {
   sastojciText.innerHTML = el.sastojci.join(", "); //// This can be improved later on
   image.src = el.slikaJela;
 }
-
-//// Greeeeeen
-
-function green(county) {
-  for (const county of land) {
-    document.getElementById(county.id).addEventListener("click", function (e) {
-      if (e.target.id === county.id) {
-        county.style.setProperty("fill", "rgb(11, 73, 11)");
-      }
-    });
-  }
-}
-
-//// Day/Night mode

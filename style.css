@@ -86,13 +86,16 @@ svg path:hover {
   cursor: pointer;
 }
 
-svg path:active {
-  fill: rgb(11, 73, 11);
-  cursor: pointer;
+.counties {
+  fill: #00394f;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
 }
 
-.land {
-  fill: #00394f;
+.dayMode {
+  fill: #588157;
   fill-opacity: 1;
   stroke: white;
   stroke-opacity: 1;
@@ -191,7 +194,7 @@ a:hover {
 .dropbtn {
   background-color: inherit;
   color: antiquewhite;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -244,4 +247,20 @@ a:hover {
 .dropdown:hover .dropbtn {
   text-decoration: underline;
   cursor: pointer;
+}
+
+#menu {
+  float: right;
+  background-color: #f1f1f1;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+select {
+  min-width: 150px;
+  height: 30px;
+  font: 20px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: beige;
+  background-color: #006284;
 }
